@@ -1,0 +1,348 @@
+openapi: 3.0.1
+info:
+  title: Laminar Configuration Stores API
+  version: v1
+  description: Public external API for Minicor / Laminar Run. Trigger desktop-automation workflows and manage configuration stores using external API-key authentication.
+  contact:
+    name: Minicor / Laminar Run
+    email: connect@minicor.com
+    url: https://docs.laminar.run/
+servers:
+- url: https://api.laminar.run
+  description: Laminar API
+security:
+- api-key-query: []
+- api-key: []
+tags:
+- name: Configuration Stores
+  description: Laminar Configuration Store endpoints, for managing configuration stores and properties within workspaces.
+paths:
+  /configurations/external:
+    post:
+      tags:
+      - Configuration Stores
+      summary: Create Configuration Store (External)
+      description: Creates a new configuration store via external API key authentication.
+      operationId: createConfigurationStoreExternal
+      parameters:
+      - name: X-API-KEY
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateConfigurationStoreRequest'
+        required: true
+      responses:
+        '201':
+          description: Configuration store created successfully
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ConfigurationStore'
+  /configurations/{externalId}/external:
+    delete:
+      tags:
+      - Configuration Stores
+      summary: Delete Configuration Store (External)
+      description: Archives a configuration store via external API key authentication.
+      operationId: deleteConfigurationStoreExternal
+      parameters:
+      - name: X-API-KEY
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: externalId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Configuration store archived successfully
+        '401':
+          description: Invalid API key
+        '404':
+          description: Configuration store or property not found
+  /configurations/{externalId}/restore/external:
+    put:
+      tags:
+      - Configuration Stores
+      summary: Restore Configuration Store (External)
+      description: Restores an archived configuration store via external API key authentication.
+      operationId: restoreConfigurationStoreExternal
+      parameters:
+      - name: X-API-KEY
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: externalId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Configuration store restored successfully
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ConfigurationStore'
+        '401':
+          description: Invalid API key
+        '404':
+          description: Archived configuration store not found
+  /configurations/{externalId}/keys/external:
+    get:
+      tags:
+      - Configuration Stores
+      summary: Get Configuration Keys (External)
+      description: Retrieves list of property keys via external API key authentication.
+      operationId: getConfigurationKeysExternal
+      parameters:
+      - name: X-API-KEY
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: externalId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: workspaceId
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: Configuration keys retrieved successfully
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ConfigurationKeysResponse'
+        '401':
+          description: Invalid API key
+        '404':
+          description: Configuration store not found
+  /configurations/{externalId}/properties/external:
+    put:
+      tags:
+      - Configuration Stores
+      summary: Bulk Update Properties (External)
+      description: Updates multiple properties via external API key authentication.
+      operationId: bulkUpdatePropertiesExternal
+      parameters:
+      - name: X-API-KEY
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: externalId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: workspaceId
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BulkUpdatePropertiesRequest'
+        required: true
+      responses:
+        '200':
+          description: Properties updated successfully
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ConfigurationStore'
+        '401':
+          description: Invalid API key
+        '404':
+          description: Configuration store not found
+  /configurations/{externalId}/properties/{key}/external:
+    delete:
+      tags:
+      - Configuration Stores
+      summary: Remove Property (External)
+      description: Removes a property from the configuration store via external API key authentication.
+      operationId: removePropertyExternal
+      parameters:
+      - name: X-API-KEY
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: externalId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: key
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: workspaceId
+        in: query
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: Property removed successfully
+        '401':
+          description: Invalid API key
+        '404':
+          description: Configuration store or property not found
+components:
+  schemas:
+    BulkUpdatePropertiesRequest:
+      required:
+      - properties
+      type: object
+      properties:
+        properties:
+          type: array
+          items:
+            $ref: '#/components/schemas/PropertyDTO'
+    CreateConfigurationStoreRequest:
+      required:
+      - externalId
+      - name
+      - properties
+      - workspaceId
+      type: object
+      properties:
+        workspaceId:
+          type: integer
+          format: int64
+        name:
+          type: string
+        externalId:
+          type: string
+        properties:
+          type: array
+          items:
+            $ref: '#/components/schemas/PropertyDTO'
+    PropertyDTO:
+      required:
+      - key
+      - value
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+    Property:
+      required:
+      - key
+      - value
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        key:
+          type: string
+        value:
+          type: string
+    ConfigurationKeysResponse:
+      required:
+      - externalId
+      - keys
+      - name
+      type: object
+      properties:
+        keys:
+          type: array
+          items:
+            type: string
+        externalId:
+          type: string
+        name:
+          type: string
+    ConfigurationStore:
+      required:
+      - properties
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        workspaceId:
+          type: integer
+          format: int64
+        name:
+          type: string
+        externalId:
+          type: string
+        archivedAt:
+          type: string
+          format: date-time
+        properties:
+          uniqueItems: true
+          type: array
+          items:
+            $ref: '#/components/schemas/Property'
+  securitySchemes:
+    api-key-query:
+      type: apiKey
+      description: API key authentication via query parameter
+      name: api_key
+      in: query
+    api-key:
+      type: apiKey
+      description: API key authentication via header
+      name: X-API-KEY
+      in: header
+x-apievangelist:
+  generated: '2026-07-20'
+  method: searched
+  source: https://docs.laminar.run/api-guide/execute-a-workflow.md + https://docs.laminar.run/api-guide/managing-configurations.md
+  note: Consolidated from the per-endpoint OpenAPI 3.0.1 fragments the provider publishes in its GitBook API Guide (Laminar API, api.laminar.run). Minicor is operated by Laminar Run, Inc.; the public developer API is the Laminar workflow/configuration API.

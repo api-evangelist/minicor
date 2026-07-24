@@ -1,0 +1,111 @@
+openapi: 3.0.1
+info:
+  title: Laminar Configuration Stores Workflows API
+  version: v1
+  description: Public external API for Minicor / Laminar Run. Trigger desktop-automation workflows and manage configuration stores using external API-key authentication.
+  contact:
+    name: Minicor / Laminar Run
+    email: connect@minicor.com
+    url: https://docs.laminar.run/
+servers:
+- url: https://api.laminar.run
+  description: Laminar API
+security:
+- api-key-query: []
+- api-key: []
+tags:
+- name: Workflows
+  description: Laminar Workflow endpoints, for managing workflows and workflow executions.
+paths:
+  /workflow/execute/external/{workflowId}:
+    post:
+      tags:
+      - Workflows
+      summary: Execute Workflow (External)
+      description: Executes a workflow using external API key authentication.
+      operationId: executeExternalFlow
+      parameters:
+      - name: workflowId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: X-API-KEY
+        in: header
+        required: false
+        schema:
+          type: string
+      - name: api_key
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: configuration_id
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: response_type
+        in: query
+        required: false
+        schema:
+          type: string
+          default: json
+      - name: start_from_step
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: end_at_step
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: callback_url
+        in: query
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              type: string
+      responses:
+        '200':
+          description: Workflow executed successfully
+          content:
+            '*/*':
+              schema:
+                type: object
+        '400':
+          description: Execution failed
+          content:
+            '*/*':
+              schema:
+                type: object
+        '401':
+          description: Unauthorized
+          content:
+            '*/*':
+              schema:
+                type: object
+components:
+  securitySchemes:
+    api-key-query:
+      type: apiKey
+      description: API key authentication via query parameter
+      name: api_key
+      in: query
+    api-key:
+      type: apiKey
+      description: API key authentication via header
+      name: X-API-KEY
+      in: header
+x-apievangelist:
+  generated: '2026-07-20'
+  method: searched
+  source: https://docs.laminar.run/api-guide/execute-a-workflow.md + https://docs.laminar.run/api-guide/managing-configurations.md
+  note: Consolidated from the per-endpoint OpenAPI 3.0.1 fragments the provider publishes in its GitBook API Guide (Laminar API, api.laminar.run). Minicor is operated by Laminar Run, Inc.; the public developer API is the Laminar workflow/configuration API.
