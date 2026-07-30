@@ -1,22 +1,181 @@
 aid: minicor
 name: Minicor
-description: Minicor is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Minicor (operated by Laminar Run, Inc.) is a platform for building and running
+  desktop automations at scale using computer-use AI agents. Legacy desktop
+  software such as EHRs, ERPs, DMS, WMS and PMS systems often has no API, so the
+  only way to read or write data is to drive the desktop like a human. Minicor
+  automates these systems reliably: install a desktop client on the machines
+  running the legacy software, record a workflow, and trigger a full desktop
+  workflow on a Windows VM with a single API call that returns structured JSON.
+  Automations are stored as deterministic code for speed while a reasoning model,
+  grounding model, reflection agent and OCR handle recovery, adaptation and edge
+  cases, self-healing when UIs change. The developer-facing surface is the
+  Laminar API (api.laminar.run) for executing workflows and managing
+  configuration stores, authenticated with an API key. Minicor is SOC 2 Type II
+  and HIPAA compliant and is a Y Combinator (X26) company.
 url: https://raw.githubusercontent.com/api-evangelist/minicor/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://minicor.com/images/logo-minicor.svg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - y-combinator
-x-tier: stub
+x-tier: enriched
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Desktop Automation
+- RPA
+- Computer Use Agents
+- Workflow Automation
+- Healthcare
+- Legacy Systems
+- AI Agents
+- Integration
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 2
+  pass: local-v1
+apis:
+- aid: minicor:minicor-configuration-stores-api
+  name: Minicor Configuration Stores API
+  description: >-
+    Laminar Configuration Store endpoints, for managing configuration stores and properties within workspaces.
+  humanURL: https://docs.laminar.run/
+  baseURL: https://api.laminar.run
+  tags:
+  - Configuration Stores
+  properties:
+  - type: OpenAPI
+    url: openapi/minicor-configuration-stores-api-openapi.yml
+  - type: APIReference
+    url: https://docs.laminar.run/api-guide/execute-a-workflow
+  - type: Documentation
+    url: https://docs.laminar.run/
+  - type: GettingStarted
+    url: https://docs.laminar.run/getting-started
+- aid: minicor:minicor-external-api
+  name: Minicor external API
+  description: The external API from Minicor — 7 operation(s) for external.
+  humanURL: https://docs.laminar.run/
+  baseURL: https://api.laminar.run
+  tags:
+  - external
+  properties:
+  - type: OpenAPI
+    url: openapi/minicor-external-api-openapi.yml
+  - type: APIReference
+    url: https://docs.laminar.run/api-guide/execute-a-workflow
+  - type: Documentation
+    url: https://docs.laminar.run/
+  - type: GettingStarted
+    url: https://docs.laminar.run/getting-started
+- aid: minicor:minicor-workflows-api
+  name: Minicor Workflows API
+  description: Laminar Workflow endpoints, for managing workflows and workflow executions.
+  humanURL: https://docs.laminar.run/
+  baseURL: https://api.laminar.run
+  tags:
+  - Workflows
+  properties:
+  - type: OpenAPI
+    url: openapi/minicor-workflows-api-openapi.yml
+  - type: APIReference
+    url: https://docs.laminar.run/api-guide/execute-a-workflow
+  - type: Documentation
+    url: https://docs.laminar.run/
+  - type: GettingStarted
+    url: https://docs.laminar.run/getting-started
+common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/minicor/overview
+- type: DeveloperPortal
+  url: https://docs.laminar.run/
+- type: Documentation
+  url: https://docs.laminar.run/
+- type: APIReference
+  url: https://docs.laminar.run/api-guide/execute-a-workflow
+- type: GettingStarted
+  url: https://docs.laminar.run/getting-started
+- type: Authentication
+  url: authentication/minicor-authentication.yml
+- type: Blog
+  url: https://minicor.com/blog
+- type: GitHubOrganization
+  url: https://github.com/laminar-run
+- type: Support
+  url: https://docs.laminar.run/get-in-touch/product-support
+- type: SignUp
+  url: https://app.laminar.run/
+- type: TermsOfService
+  url: https://legal.laminar.run/terms-of-service
+- type: PrivacyPolicy
+  url: https://legal.laminar.run/privacy-policy
+- type: StatusPage
+  url: https://status.laminar.run/
+- type: ChangeLog
+  url: https://docs.laminar.run/get-in-touch/changelog
+- type: ChangeLog
+  url: changelog/minicor-changelog.yml
+  name: Minicor changelog (structured)
+- type: Lifecycle
+  url: lifecycle/minicor-lifecycle.yml
+- type: MCPServer
+  url: mcp/minicor-mcp.yml
+- type: Packages
+  url: packages/minicor-packages.yml
+- type: CLI
+  url: cli/minicor-cli.yml
+- type: LLMsTxt
+  url: llms/minicor-llms.txt
+- type: WellKnown
+  url: well-known/minicor-well-known.yml
+- type: SecurityTxt
+  url: well-known/minicor-security.txt
+- type: VulnerabilityDisclosure
+  url: security/minicor-vulnerability-disclosure.yml
+- type: Security
+  url: security/minicor-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/minicor-domain-security.yml
+- type: TrustCenter
+  url: https://app.mycroft.io/trust/laminar
+- type: Compliance
+  url: https://app.mycroft.io/trust/laminar
+- type: Conformance
+  url: conformance/minicor-conformance.yml
+- type: Conventions
+  url: conventions/minicor-conventions.yml
+- type: ErrorCatalog
+  url: errors/minicor-problem-types.yml
+- type: DataModel
+  url: data-model/minicor-data-model.yml
+- type: Overlay
+  url: overlays/minicor-overlay.yaml
+- type: Webhooks
+  url: asyncapi/minicor-webhooks.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: AgenticAccess
+  url: agentic-access/minicor-agentic-access.yml
