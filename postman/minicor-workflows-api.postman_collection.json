@@ -1,0 +1,405 @@
+{
+  "info": {
+    "_postman_id": "520a323b-b1e2-4152-ac97-fcff1bfd16ef",
+    "name": "Laminar Configuration Stores Workflows API",
+    "description": "Public external API for Minicor / Laminar Run. Trigger desktop-automation workflows and manage configuration stores using external API-key authentication.\n\nContact Support:\n Name: Minicor / Laminar Run\n Email: connect@minicor.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T02:14:46.000Z",
+    "updatedAt": "2026-07-28T02:14:46.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-520a323b-b1e2-4152-ac97-fcff1bfd16ef"
+  },
+  "item": [
+    {
+      "name": "workflow",
+      "item": [
+        {
+          "name": "execute",
+          "item": [
+            {
+              "name": "external",
+              "item": [
+                {
+                  "name": "{workflowId}",
+                  "item": [
+                    {
+                      "name": "Execute Workflow (External)",
+                      "id": "13f6273d-6a3e-474a-abaa-f2218dc73537",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "X-API-KEY",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "*/*"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "<string>"
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/workflow/execute/external/:workflowId?api_key=<string>&configuration_id=<string>&response_type=json&start_from_step=<integer>&end_at_step=<integer>&callback_url=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "workflow",
+                            "execute",
+                            "external",
+                            ":workflowId"
+                          ],
+                          "query": [
+                            {
+                              "key": "api_key",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "configuration_id",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "response_type",
+                              "value": "json"
+                            },
+                            {
+                              "key": "start_from_step",
+                              "value": "<integer>"
+                            },
+                            {
+                              "key": "end_at_step",
+                              "value": "<integer>"
+                            },
+                            {
+                              "key": "callback_url",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "id": "1b7a47da-f2e1-4597-be27-0bf4f313c5c8",
+                              "key": "workflowId",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Executes a workflow using external API key authentication."
+                      },
+                      "response": [
+                        {
+                          "id": "92df44d1-de5b-4650-84bc-08571157fdfe",
+                          "name": "Workflow executed successfully",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "*/*"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "<string>"
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/workflow/execute/external/:workflowId?api_key=<API Key>&configuration_id=<string>&response_type=json&start_from_step=<integer>&end_at_step=<integer>&callback_url=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "workflow",
+                                "execute",
+                                "external",
+                                ":workflowId"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                },
+                                {
+                                  "key": "configuration_id",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "key": "response_type",
+                                  "value": "json"
+                                },
+                                {
+                                  "key": "start_from_step",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "end_at_step",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "callback_url",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "workflowId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-07-28T02:14:46.000Z",
+                          "updatedAt": "2026-07-28T02:14:46.000Z",
+                          "uid": "35240-92df44d1-de5b-4650-84bc-08571157fdfe"
+                        },
+                        {
+                          "id": "fbdeff42-63f8-4549-ba80-d4a096ead6c4",
+                          "name": "Execution failed",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "*/*"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "<string>"
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/workflow/execute/external/:workflowId?api_key=<API Key>&configuration_id=<string>&response_type=json&start_from_step=<integer>&end_at_step=<integer>&callback_url=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "workflow",
+                                "execute",
+                                "external",
+                                ":workflowId"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                },
+                                {
+                                  "key": "configuration_id",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "key": "response_type",
+                                  "value": "json"
+                                },
+                                {
+                                  "key": "start_from_step",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "end_at_step",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "callback_url",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "workflowId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Bad Request",
+                          "code": 400,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-07-28T02:14:46.000Z",
+                          "updatedAt": "2026-07-28T02:14:46.000Z",
+                          "uid": "35240-fbdeff42-63f8-4549-ba80-d4a096ead6c4"
+                        },
+                        {
+                          "id": "59300221-c809-4387-969c-16ebcc82c5b1",
+                          "name": "Unauthorized",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "*/*"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "<string>"
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/workflow/execute/external/:workflowId?api_key=<API Key>&configuration_id=<string>&response_type=json&start_from_step=<integer>&end_at_step=<integer>&callback_url=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "workflow",
+                                "execute",
+                                "external",
+                                ":workflowId"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                },
+                                {
+                                  "key": "configuration_id",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "key": "response_type",
+                                  "value": "json"
+                                },
+                                {
+                                  "key": "start_from_step",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "end_at_step",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "callback_url",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "workflowId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-07-28T02:14:46.000Z",
+                          "updatedAt": "2026-07-28T02:14:46.000Z",
+                          "uid": "35240-59300221-c809-4387-969c-16ebcc82c5b1"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T02:14:46.000Z",
+                      "updatedAt": "2026-07-28T02:14:46.000Z",
+                      "uid": "35240-13f6273d-6a3e-474a-abaa-f2218dc73537"
+                    }
+                  ],
+                  "id": "a628cdca-083d-444e-b569-122eb80e1990",
+                  "createdAt": "2026-07-28T02:14:46.000Z",
+                  "updatedAt": "2026-07-28T02:14:46.000Z",
+                  "uid": "35240-a628cdca-083d-444e-b569-122eb80e1990"
+                }
+              ],
+              "id": "4276829e-b894-46d7-a0cd-76e79967ed59",
+              "createdAt": "2026-07-28T02:14:46.000Z",
+              "updatedAt": "2026-07-28T02:14:46.000Z",
+              "uid": "35240-4276829e-b894-46d7-a0cd-76e79967ed59"
+            }
+          ],
+          "id": "0640a76c-3922-41ca-afce-f475a44891c8",
+          "createdAt": "2026-07-28T02:14:46.000Z",
+          "updatedAt": "2026-07-28T02:14:46.000Z",
+          "uid": "35240-0640a76c-3922-41ca-afce-f475a44891c8"
+        }
+      ],
+      "id": "e571ca0d-9327-49df-b758-ff2ef368eb2c",
+      "createdAt": "2026-07-28T02:14:46.000Z",
+      "updatedAt": "2026-07-28T02:14:46.000Z",
+      "uid": "35240-e571ca0d-9327-49df-b758-ff2ef368eb2c"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "query",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.laminar.run"
+    }
+  ]
+}

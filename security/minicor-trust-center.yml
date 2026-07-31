@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source:
+  - https://minicor.com/llms.txt
+  - https://minicor.com/.well-known/ai-plugin.json
+url: https://app.mycroft.io/trust/laminar
+certifications:
+  - SOC 2 Type II
+  - HIPAA
+notes: >-
+  Minicor links a hosted trust center at app.mycroft.io/trust/laminar (referenced
+  from its llms.txt as "Security"). The trust portal renders client-side so
+  certifications could not be scraped by the automated probe; the named
+  certifications above are taken verbatim from the provider's own published
+  llms.txt and ai-plugin.json ("SOC 2 Type II and HIPAA compliant").
+evidence:
+  - source: https://minicor.com/llms.txt
+    keywords: [soc 2 type ii, hipaa]
+  - source: https://minicor.com/.well-known/ai-plugin.json
+    keywords: [soc 2 type ii, hipaa]

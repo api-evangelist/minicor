@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: https://registry.npmjs.org/@minicor/mcp-server
+notes: >-
+  Minicor markets its external API as "no SDK required — one API call returns
+  structured JSON," so it ships no traditional per-language client SDK. It does
+  publish a first-party npm package, @minicor/mcp-server, that bundles the Minicor
+  MCP server plus a CLI (bin: minicor, minicor-mcp, minicor-mcp-setup,
+  minicor-bootstrap, minicor-seed-skills). The observability-platform "lmnr"
+  packages (lmnr-ai, YC S24) are a DIFFERENT company and are NOT included here.
+packages:
+  - language: javascript
+    registry: npm
+    name: "@minicor/mcp-server"
+    version: 4.2.0
+    url: https://www.npmjs.com/package/@minicor/mcp-server
+    install: npm install -g @minicor/mcp-server
+    repository: https://github.com/laminar-run/mcp
+    homepage: https://minicor.com
+    official: true
+    description: >-
+      Desktop and browser RPA automation, workflow management, and AI-powered
+      debugging for the Minicor platform (formerly Laminar). Provides the Minicor
+      MCP server and CLI for Cursor/Claude agents.
+    keywords: [mcp, minicor, laminar, rpa, desktop-automation, browser-automation, workflow, cursor, claude]

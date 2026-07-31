@@ -1,0 +1,11 @@
+generated: '2026-07-20'
+method: generated
+source: openapi/minicor-openapi.json
+skills:
+  - file: minicor-execute-workflow.md
+    name: Execute a Minicor desktop-automation workflow
+    api: openapi/minicor-openapi.json
+    operations:
+      - executeExternalFlow
+      - getConfigurationKeysExternal
+      - bulkUpdatePropertiesExternal

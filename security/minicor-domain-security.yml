@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: docs.laminar.run
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 15 22:44:07 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: api.laminar.run
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 12 15:35:26 2026 GMT
+  hsts: null
+domains:
+- domain: laminar.run
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

@@ -1,0 +1,65 @@
+# Minicor
+
+> A platform for building and running desktop automations at scale with computer use agents
+
+Legacy desktop software (EHRs, ERPs, DMS, WMS, PMS) has no APIs. The only way
+to read or write data is to interact with the desktop like a human would. Minicor
+automates these systems reliably at scale so companies can go live in weeks.
+
+## How It Works
+
+1. Install Desktop Client on the machines running the legacy software
+2. Record a video of a human performing the workflow
+3. Minicor handles everything after that
+
+One API call triggers a full desktop workflow on a Windows VM. Automation is
+stored as deterministic code for speed. A reasoning model, grounding model,
+reflection agent, and OCR handle recovery, adaptation, and edge cases. The agent
+learns from past runs and self-heals when UIs change.
+
+## Key Facts
+
+- SOC 2 Type II and HIPAA compliant
+- 93-96% click accuracy (vs 80-85% for other computer use approaches)
+- Zero to production in weeks
+- Deploy on-premise, cloud, or Citrix
+- YC X26
+
+## Features
+
+- Self-Healing: automations adapt when UIs change instead of breaking
+- One API Call: triggers full workflow, returns structured JSON
+- Video Replay: of every action, with error logging and monitoring
+- Deploy Anywhere: Windows VMs, browser, on-prem, cloud, Citrix
+- Horizontal Scaling: orchestration across thousands of desktops
+
+## Target Systems
+
+- Healthcare EMRs: Athena, eClinicalWorks, Epic, Cerner, PS Suite, Meditech
+- Dental PMS: Open Dental, Dental Vision, Eaglesoft
+- Automotive DMS: CDK Global, Reynolds, Techeon
+- Supply Chain WMS/ERP: HighJump, SAP, Sage 300
+- Home Health: Home Care HomeBase, Wellsky, Kinser
+- Financial Services: claims platforms, banking, underwriting systems
+
+## vs Other Approaches
+
+- vs UiPath/Blue Prism: API-first, self-healing, video replay, on-prem containers.
+  Built for AI companies, not enterprise IT departments.
+- vs Computer Use Models (Anthropic/OpenAI): Stores automation as code, agent only
+  for recovery. Faster and more accurate in production.
+- vs Internal Build: Not hard to build one RPA. Hard to run hundreds reliably.
+
+## MCP Integration
+
+Minicor is accessible via Model Context Protocol (MCP). AI coding agents can
+build, debug, and manage RPAs conversationally.
+
+## Links
+
+- Use Cases: https://minicor.com/use-cases
+- Blog: https://minicor.com/blog
+- Documentation: https://docs.laminar.run/
+- Contact: https://minicor.com/contact
+- Book a Demo: https://minicor.com/book-demo
+- Security: https://app.mycroft.io/trust/laminar

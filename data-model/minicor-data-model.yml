@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/minicor-openapi.json
+entities:
+  - name: Workflow
+    id_field: workflowId
+    id_type: string
+    note: Referenced by path in executeExternalFlow; not fully modeled in the external spec.
+  - name: ConfigurationStore
+    id_field: externalId
+    also_id: id (int64)
+    fields: [id, workspaceId, name, externalId, archivedAt, properties]
+  - name: Property
+    fields: [id, key, value]
+  - name: PropertyDTO
+    fields: [key, value]
+    note: Write-side shape for property create/update requests.
+relationships:
+  - from: ConfigurationStore
+    to: Property
+    kind: has_many
+    via: properties
+  - from: Property
+    to: ConfigurationStore
+    kind: belongs_to
+    via: externalId
+  - from: ConfigurationStore
+    to: Workspace
+    kind: belongs_to
+    via: workspaceId
+  - from: Workflow
+    to: ConfigurationStore
+    kind: has_one
+    via: configuration_id
+    note: executeExternalFlow accepts an optional configuration_id to bind a config store.

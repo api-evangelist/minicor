@@ -1,0 +1,1731 @@
+{
+  "info": {
+    "_postman_id": "94f53db1-60a9-49e8-8434-96a63e54b897",
+    "name": "Laminar Configuration Stores external API",
+    "description": "Public external API for Minicor / Laminar Run. Trigger desktop-automation workflows and manage configuration stores using external API-key authentication.\n\nContact Support:\n Name: Minicor / Laminar Run\n Email: connect@minicor.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T02:13:14.000Z",
+    "updatedAt": "2026-07-28T02:13:14.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-94f53db1-60a9-49e8-8434-96a63e54b897"
+  },
+  "item": [
+    {
+      "name": "workflow",
+      "item": [
+        {
+          "name": "execute",
+          "item": [
+            {
+              "name": "external",
+              "item": [
+                {
+                  "name": "{workflowId}",
+                  "item": [
+                    {
+                      "name": "Execute Workflow (External)",
+                      "id": "525f5707-aa04-4e72-a444-a762728946d0",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "X-API-KEY",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "*/*"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "<string>"
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/workflow/execute/external/:workflowId?api_key=<string>&configuration_id=<string>&response_type=json&start_from_step=<integer>&end_at_step=<integer>&callback_url=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "workflow",
+                            "execute",
+                            "external",
+                            ":workflowId"
+                          ],
+                          "query": [
+                            {
+                              "key": "api_key",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "configuration_id",
+                              "value": "<string>"
+                            },
+                            {
+                              "key": "response_type",
+                              "value": "json"
+                            },
+                            {
+                              "key": "start_from_step",
+                              "value": "<integer>"
+                            },
+                            {
+                              "key": "end_at_step",
+                              "value": "<integer>"
+                            },
+                            {
+                              "key": "callback_url",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "id": "0a46dac9-0a32-463f-a62e-35ac1c8dfc50",
+                              "key": "workflowId",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Executes a workflow using external API key authentication."
+                      },
+                      "response": [
+                        {
+                          "id": "f51ddb25-ca3d-4f5b-9709-f225dc860e54",
+                          "name": "Workflow executed successfully",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "*/*"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "<string>"
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/workflow/execute/external/:workflowId?api_key=<API Key>&configuration_id=<string>&response_type=json&start_from_step=<integer>&end_at_step=<integer>&callback_url=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "workflow",
+                                "execute",
+                                "external",
+                                ":workflowId"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                },
+                                {
+                                  "key": "configuration_id",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "key": "response_type",
+                                  "value": "json"
+                                },
+                                {
+                                  "key": "start_from_step",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "end_at_step",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "callback_url",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "workflowId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-f51ddb25-ca3d-4f5b-9709-f225dc860e54"
+                        },
+                        {
+                          "id": "01903e4f-a186-4380-bf56-aa42a9cf3c60",
+                          "name": "Execution failed",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "*/*"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "<string>"
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/workflow/execute/external/:workflowId?api_key=<API Key>&configuration_id=<string>&response_type=json&start_from_step=<integer>&end_at_step=<integer>&callback_url=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "workflow",
+                                "execute",
+                                "external",
+                                ":workflowId"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                },
+                                {
+                                  "key": "configuration_id",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "key": "response_type",
+                                  "value": "json"
+                                },
+                                {
+                                  "key": "start_from_step",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "end_at_step",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "callback_url",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "workflowId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Bad Request",
+                          "code": 400,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-01903e4f-a186-4380-bf56-aa42a9cf3c60"
+                        },
+                        {
+                          "id": "4319499c-0c7a-43db-aa40-4bd2f48c5333",
+                          "name": "Unauthorized",
+                          "originalRequest": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "*/*"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "<string>"
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/workflow/execute/external/:workflowId?api_key=<API Key>&configuration_id=<string>&response_type=json&start_from_step=<integer>&end_at_step=<integer>&callback_url=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "workflow",
+                                "execute",
+                                "external",
+                                ":workflowId"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                },
+                                {
+                                  "key": "configuration_id",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "key": "response_type",
+                                  "value": "json"
+                                },
+                                {
+                                  "key": "start_from_step",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "end_at_step",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "key": "callback_url",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "workflowId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{}",
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-4319499c-0c7a-43db-aa40-4bd2f48c5333"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T02:13:14.000Z",
+                      "updatedAt": "2026-07-28T02:13:14.000Z",
+                      "uid": "35240-525f5707-aa04-4e72-a444-a762728946d0"
+                    }
+                  ],
+                  "id": "66486fef-e179-49e0-9afa-0ba6e7a5b5bf",
+                  "createdAt": "2026-07-28T02:13:14.000Z",
+                  "updatedAt": "2026-07-28T02:13:14.000Z",
+                  "uid": "35240-66486fef-e179-49e0-9afa-0ba6e7a5b5bf"
+                }
+              ],
+              "id": "85d4b855-ff9c-4179-936a-7f1fe824bf5e",
+              "createdAt": "2026-07-28T02:13:14.000Z",
+              "updatedAt": "2026-07-28T02:13:14.000Z",
+              "uid": "35240-85d4b855-ff9c-4179-936a-7f1fe824bf5e"
+            }
+          ],
+          "id": "0840a878-ee8d-4b99-8c21-72e0e509c117",
+          "createdAt": "2026-07-28T02:13:14.000Z",
+          "updatedAt": "2026-07-28T02:13:14.000Z",
+          "uid": "35240-0840a878-ee8d-4b99-8c21-72e0e509c117"
+        }
+      ],
+      "id": "07399b4b-5a67-4425-813d-9451eed61e65",
+      "createdAt": "2026-07-28T02:13:14.000Z",
+      "updatedAt": "2026-07-28T02:13:14.000Z",
+      "uid": "35240-07399b4b-5a67-4425-813d-9451eed61e65"
+    },
+    {
+      "name": "configurations",
+      "item": [
+        {
+          "name": "external",
+          "item": [
+            {
+              "name": "Create Configuration Store (External)",
+              "id": "9b275055-cd81-4c1e-afc2-717d82aed020",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-API-KEY",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"externalId\": \"<string>\",\n  \"name\": \"<string>\",\n  \"properties\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"workspaceId\": \"<long>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/configurations/external?api_key=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "configurations",
+                    "external"
+                  ],
+                  "query": [
+                    {
+                      "key": "api_key",
+                      "value": "<string>"
+                    }
+                  ]
+                },
+                "description": "Creates a new configuration store via external API key authentication."
+              },
+              "response": [
+                {
+                  "id": "57c40062-7eb8-44ed-b57b-4b6c79e5a2f5",
+                  "name": "Configuration store created successfully",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "X-API-KEY",
+                        "value": "<string>"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"externalId\": \"<string>\",\n  \"name\": \"<string>\",\n  \"properties\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ],\n  \"workspaceId\": \"<long>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/configurations/external?api_key=<API Key>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "configurations",
+                        "external"
+                      ],
+                      "query": [
+                        {
+                          "key": "api_key",
+                          "value": "<API Key>"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"properties\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\",\n      \"id\": \"<long>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\",\n      \"id\": \"<long>\"\n    }\n  ],\n  \"id\": \"<long>\",\n  \"workspaceId\": \"<long>\",\n  \"name\": \"<string>\",\n  \"externalId\": \"<string>\",\n  \"archivedAt\": \"<dateTime>\"\n}",
+                  "createdAt": "2026-07-28T02:13:14.000Z",
+                  "updatedAt": "2026-07-28T02:13:14.000Z",
+                  "uid": "35240-57c40062-7eb8-44ed-b57b-4b6c79e5a2f5"
+                }
+              ],
+              "createdAt": "2026-07-28T02:13:14.000Z",
+              "updatedAt": "2026-07-28T02:13:14.000Z",
+              "uid": "35240-9b275055-cd81-4c1e-afc2-717d82aed020"
+            }
+          ],
+          "id": "1bbd4ba6-9db1-4962-9338-9cbe09c6dc8f",
+          "createdAt": "2026-07-28T02:13:14.000Z",
+          "updatedAt": "2026-07-28T02:13:14.000Z",
+          "uid": "35240-1bbd4ba6-9db1-4962-9338-9cbe09c6dc8f"
+        },
+        {
+          "name": "{externalId}",
+          "item": [
+            {
+              "name": "external",
+              "item": [
+                {
+                  "name": "Delete Configuration Store (External)",
+                  "id": "ed466395-02e4-4eb0-aed0-d3cdb9e5285b",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "key": "X-API-KEY",
+                        "value": "<string>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/configurations/:externalId/external?api_key=<string>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "configurations",
+                        ":externalId",
+                        "external"
+                      ],
+                      "query": [
+                        {
+                          "key": "api_key",
+                          "value": "<string>"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "id": "996006a2-3ce6-4624-943a-30647cc7185a",
+                          "key": "externalId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Archives a configuration store via external API key authentication."
+                  },
+                  "response": [
+                    {
+                      "id": "bc1d1163-ad83-4898-a3aa-cac6f6246e7a",
+                      "name": "Configuration store archived successfully",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "X-API-KEY",
+                            "value": "<string>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/configurations/:externalId/external?api_key=<API Key>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "configurations",
+                            ":externalId",
+                            "external"
+                          ],
+                          "query": [
+                            {
+                              "key": "api_key",
+                              "value": "<API Key>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "externalId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T02:13:14.000Z",
+                      "updatedAt": "2026-07-28T02:13:14.000Z",
+                      "uid": "35240-bc1d1163-ad83-4898-a3aa-cac6f6246e7a"
+                    },
+                    {
+                      "id": "419087f7-4fd1-48f8-83b1-4cd27932b362",
+                      "name": "Invalid API key",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "X-API-KEY",
+                            "value": "<string>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/configurations/:externalId/external?api_key=<API Key>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "configurations",
+                            ":externalId",
+                            "external"
+                          ],
+                          "query": [
+                            {
+                              "key": "api_key",
+                              "value": "<API Key>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "externalId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T02:13:14.000Z",
+                      "updatedAt": "2026-07-28T02:13:14.000Z",
+                      "uid": "35240-419087f7-4fd1-48f8-83b1-4cd27932b362"
+                    },
+                    {
+                      "id": "e6f8de71-8ec2-4694-8b83-490b1234b526",
+                      "name": "Configuration store or property not found",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "key": "X-API-KEY",
+                            "value": "<string>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/configurations/:externalId/external?api_key=<API Key>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "configurations",
+                            ":externalId",
+                            "external"
+                          ],
+                          "query": [
+                            {
+                              "key": "api_key",
+                              "value": "<API Key>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "externalId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T02:13:14.000Z",
+                      "updatedAt": "2026-07-28T02:13:14.000Z",
+                      "uid": "35240-e6f8de71-8ec2-4694-8b83-490b1234b526"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T02:13:14.000Z",
+                  "updatedAt": "2026-07-28T02:13:14.000Z",
+                  "uid": "35240-ed466395-02e4-4eb0-aed0-d3cdb9e5285b"
+                }
+              ],
+              "id": "4bac84dc-2162-417f-98dc-98c671f58ee6",
+              "createdAt": "2026-07-28T02:13:14.000Z",
+              "updatedAt": "2026-07-28T02:13:14.000Z",
+              "uid": "35240-4bac84dc-2162-417f-98dc-98c671f58ee6"
+            },
+            {
+              "name": "restore",
+              "item": [
+                {
+                  "name": "external",
+                  "item": [
+                    {
+                      "name": "Restore Configuration Store (External)",
+                      "id": "7f72a275-2ec9-491b-81ac-c38ac16f44f5",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "X-API-KEY",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/configurations/:externalId/restore/external?api_key=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "configurations",
+                            ":externalId",
+                            "restore",
+                            "external"
+                          ],
+                          "query": [
+                            {
+                              "key": "api_key",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "id": "839a2000-7dcb-4394-836e-b2ac8445be4a",
+                              "key": "externalId",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Restores an archived configuration store via external API key authentication."
+                      },
+                      "response": [
+                        {
+                          "id": "94b359bb-ba42-4842-a021-0a8d14217b8b",
+                          "name": "Configuration store restored successfully",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/configurations/:externalId/restore/external?api_key=<API Key>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "configurations",
+                                ":externalId",
+                                "restore",
+                                "external"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "externalId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"properties\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\",\n      \"id\": \"<long>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\",\n      \"id\": \"<long>\"\n    }\n  ],\n  \"id\": \"<long>\",\n  \"workspaceId\": \"<long>\",\n  \"name\": \"<string>\",\n  \"externalId\": \"<string>\",\n  \"archivedAt\": \"<dateTime>\"\n}",
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-94b359bb-ba42-4842-a021-0a8d14217b8b"
+                        },
+                        {
+                          "id": "caf6a7e8-cea1-4d79-8d04-cfcb10739e8f",
+                          "name": "Invalid API key",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/configurations/:externalId/restore/external?api_key=<API Key>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "configurations",
+                                ":externalId",
+                                "restore",
+                                "external"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "externalId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-caf6a7e8-cea1-4d79-8d04-cfcb10739e8f"
+                        },
+                        {
+                          "id": "8257ba92-3f5c-45fc-9ee9-301780b245b8",
+                          "name": "Archived configuration store not found",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/configurations/:externalId/restore/external?api_key=<API Key>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "configurations",
+                                ":externalId",
+                                "restore",
+                                "external"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "externalId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Not Found",
+                          "code": 404,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-8257ba92-3f5c-45fc-9ee9-301780b245b8"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T02:13:14.000Z",
+                      "updatedAt": "2026-07-28T02:13:14.000Z",
+                      "uid": "35240-7f72a275-2ec9-491b-81ac-c38ac16f44f5"
+                    }
+                  ],
+                  "id": "20ed205c-4d4a-4408-aca8-1940543fd529",
+                  "createdAt": "2026-07-28T02:13:14.000Z",
+                  "updatedAt": "2026-07-28T02:13:14.000Z",
+                  "uid": "35240-20ed205c-4d4a-4408-aca8-1940543fd529"
+                }
+              ],
+              "id": "1681c4e7-a917-4960-9a74-8996767a74e7",
+              "createdAt": "2026-07-28T02:13:14.000Z",
+              "updatedAt": "2026-07-28T02:13:14.000Z",
+              "uid": "35240-1681c4e7-a917-4960-9a74-8996767a74e7"
+            },
+            {
+              "name": "keys",
+              "item": [
+                {
+                  "name": "external",
+                  "item": [
+                    {
+                      "name": "Get Configuration Keys (External)",
+                      "id": "c5c2ca99-5a5f-4eef-989d-15803b2ae590",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "X-API-KEY",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/configurations/:externalId/keys/external?api_key=<string>&workspaceId=<long>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "configurations",
+                            ":externalId",
+                            "keys",
+                            "external"
+                          ],
+                          "query": [
+                            {
+                              "key": "api_key",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "(Required) ",
+                              "key": "workspaceId",
+                              "value": "<long>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "id": "73711ee2-bccd-441e-ab76-c33e9ac97c40",
+                              "key": "externalId",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Retrieves list of property keys via external API key authentication."
+                      },
+                      "response": [
+                        {
+                          "id": "4eb17376-392f-4968-8b85-6ad67c6298d4",
+                          "name": "Configuration keys retrieved successfully",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/configurations/:externalId/keys/external?api_key=<API Key>&workspaceId=<long>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "configurations",
+                                ":externalId",
+                                "keys",
+                                "external"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                },
+                                {
+                                  "description": "(Required) ",
+                                  "key": "workspaceId",
+                                  "value": "<long>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "externalId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"externalId\": \"<string>\",\n  \"keys\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"name\": \"<string>\"\n}",
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-4eb17376-392f-4968-8b85-6ad67c6298d4"
+                        },
+                        {
+                          "id": "45b7e614-f87d-4343-b067-fcf9073c50c9",
+                          "name": "Invalid API key",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/configurations/:externalId/keys/external?api_key=<API Key>&workspaceId=<long>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "configurations",
+                                ":externalId",
+                                "keys",
+                                "external"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                },
+                                {
+                                  "description": "(Required) ",
+                                  "key": "workspaceId",
+                                  "value": "<long>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "externalId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-45b7e614-f87d-4343-b067-fcf9073c50c9"
+                        },
+                        {
+                          "id": "f6f72ad4-0ec2-47ac-8278-7e898f3a233d",
+                          "name": "Configuration store not found",
+                          "originalRequest": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/configurations/:externalId/keys/external?api_key=<API Key>&workspaceId=<long>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "configurations",
+                                ":externalId",
+                                "keys",
+                                "external"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                },
+                                {
+                                  "description": "(Required) ",
+                                  "key": "workspaceId",
+                                  "value": "<long>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "externalId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Not Found",
+                          "code": 404,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-f6f72ad4-0ec2-47ac-8278-7e898f3a233d"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T02:13:14.000Z",
+                      "updatedAt": "2026-07-28T02:13:14.000Z",
+                      "uid": "35240-c5c2ca99-5a5f-4eef-989d-15803b2ae590"
+                    }
+                  ],
+                  "id": "9ec84b01-495f-4560-b253-a4b8ae039209",
+                  "createdAt": "2026-07-28T02:13:14.000Z",
+                  "updatedAt": "2026-07-28T02:13:14.000Z",
+                  "uid": "35240-9ec84b01-495f-4560-b253-a4b8ae039209"
+                }
+              ],
+              "id": "26a7f80a-7cdb-4374-a4f9-22efc12e9cdd",
+              "createdAt": "2026-07-28T02:13:14.000Z",
+              "updatedAt": "2026-07-28T02:13:14.000Z",
+              "uid": "35240-26a7f80a-7cdb-4374-a4f9-22efc12e9cdd"
+            },
+            {
+              "name": "properties",
+              "item": [
+                {
+                  "name": "external",
+                  "item": [
+                    {
+                      "name": "Bulk Update Properties (External)",
+                      "id": "75f435e6-9ee4-4d21-906e-b98c4bfbadfc",
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      },
+                      "request": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "X-API-KEY",
+                            "value": "<string>"
+                          },
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "*/*"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"properties\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/configurations/:externalId/properties/external?api_key=<string>&workspaceId=<long>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "configurations",
+                            ":externalId",
+                            "properties",
+                            "external"
+                          ],
+                          "query": [
+                            {
+                              "key": "api_key",
+                              "value": "<string>"
+                            },
+                            {
+                              "description": "(Required) ",
+                              "key": "workspaceId",
+                              "value": "<long>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "id": "332994b4-f6f2-4475-b278-2920da32383e",
+                              "key": "externalId",
+                              "value": "<string>",
+                              "description": "(Required) "
+                            }
+                          ]
+                        },
+                        "description": "Updates multiple properties via external API key authentication."
+                      },
+                      "response": [
+                        {
+                          "id": "6b9074dc-8774-446f-ba0d-1674472783ed",
+                          "name": "Properties updated successfully",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "*/*"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"properties\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/configurations/:externalId/properties/external?api_key=<API Key>&workspaceId=<long>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "configurations",
+                                ":externalId",
+                                "properties",
+                                "external"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                },
+                                {
+                                  "description": "(Required) ",
+                                  "key": "workspaceId",
+                                  "value": "<long>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "externalId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "_postman_previewlanguage": "text",
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "*/*"
+                            }
+                          ],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": "{\n  \"properties\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\",\n      \"id\": \"<long>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\",\n      \"id\": \"<long>\"\n    }\n  ],\n  \"id\": \"<long>\",\n  \"workspaceId\": \"<long>\",\n  \"name\": \"<string>\",\n  \"externalId\": \"<string>\",\n  \"archivedAt\": \"<dateTime>\"\n}",
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-6b9074dc-8774-446f-ba0d-1674472783ed"
+                        },
+                        {
+                          "id": "5a5c6255-8353-4599-adf3-673c1bf1b025",
+                          "name": "Invalid API key",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"properties\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/configurations/:externalId/properties/external?api_key=<API Key>&workspaceId=<long>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "configurations",
+                                ":externalId",
+                                "properties",
+                                "external"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                },
+                                {
+                                  "description": "(Required) ",
+                                  "key": "workspaceId",
+                                  "value": "<long>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "externalId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-5a5c6255-8353-4599-adf3-673c1bf1b025"
+                        },
+                        {
+                          "id": "6bfb6a0b-a20f-40e0-b532-78099dbe6c6a",
+                          "name": "Configuration store not found",
+                          "originalRequest": {
+                            "method": "PUT",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              },
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"properties\": [\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    },\n    {\n      \"key\": \"<string>\",\n      \"value\": \"<string>\"\n    }\n  ]\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/configurations/:externalId/properties/external?api_key=<API Key>&workspaceId=<long>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "configurations",
+                                ":externalId",
+                                "properties",
+                                "external"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<API Key>"
+                                },
+                                {
+                                  "description": "(Required) ",
+                                  "key": "workspaceId",
+                                  "value": "<long>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "key": "externalId"
+                                }
+                              ]
+                            }
+                          },
+                          "status": "Not Found",
+                          "code": 404,
+                          "_postman_previewlanguage": "text",
+                          "header": [],
+                          "cookie": [],
+                          "responseTime": null,
+                          "body": null,
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-6bfb6a0b-a20f-40e0-b532-78099dbe6c6a"
+                        }
+                      ],
+                      "createdAt": "2026-07-28T02:13:14.000Z",
+                      "updatedAt": "2026-07-28T02:13:14.000Z",
+                      "uid": "35240-75f435e6-9ee4-4d21-906e-b98c4bfbadfc"
+                    }
+                  ],
+                  "id": "726e5b49-4188-48f2-9e99-d090a494a1f0",
+                  "createdAt": "2026-07-28T02:13:14.000Z",
+                  "updatedAt": "2026-07-28T02:13:14.000Z",
+                  "uid": "35240-726e5b49-4188-48f2-9e99-d090a494a1f0"
+                },
+                {
+                  "name": "{key}",
+                  "item": [
+                    {
+                      "name": "external",
+                      "item": [
+                        {
+                          "name": "Remove Property (External)",
+                          "id": "83604c22-31ec-4b84-890c-dfb88536fdab",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "DELETE",
+                            "header": [
+                              {
+                                "key": "X-API-KEY",
+                                "value": "<string>"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/configurations/:externalId/properties/:key/external?api_key=<string>&workspaceId=<long>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "configurations",
+                                ":externalId",
+                                "properties",
+                                ":key",
+                                "external"
+                              ],
+                              "query": [
+                                {
+                                  "key": "api_key",
+                                  "value": "<string>"
+                                },
+                                {
+                                  "description": "(Required) ",
+                                  "key": "workspaceId",
+                                  "value": "<long>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "id": "301acdc9-44e9-4680-b06d-0aae890f296f",
+                                  "key": "externalId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "7e2fd1e4-812d-4113-b500-2d94c150d341",
+                                  "key": "key",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Removes a property from the configuration store via external API key authentication."
+                          },
+                          "response": [
+                            {
+                              "id": "60035a1c-140d-446e-ba67-9b6c04f08ec7",
+                              "name": "Property removed successfully",
+                              "originalRequest": {
+                                "method": "DELETE",
+                                "header": [
+                                  {
+                                    "key": "X-API-KEY",
+                                    "value": "<string>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/configurations/:externalId/properties/:key/external?api_key=<API Key>&workspaceId=<long>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "configurations",
+                                    ":externalId",
+                                    "properties",
+                                    ":key",
+                                    "external"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "api_key",
+                                      "value": "<API Key>"
+                                    },
+                                    {
+                                      "description": "(Required) ",
+                                      "key": "workspaceId",
+                                      "value": "<long>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "externalId"
+                                    },
+                                    {
+                                      "key": "key"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "text",
+                              "header": [],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": null,
+                              "createdAt": "2026-07-28T02:13:14.000Z",
+                              "updatedAt": "2026-07-28T02:13:14.000Z",
+                              "uid": "35240-60035a1c-140d-446e-ba67-9b6c04f08ec7"
+                            },
+                            {
+                              "id": "05cd5220-d1e0-400a-93a7-7fa69bae23e9",
+                              "name": "Invalid API key",
+                              "originalRequest": {
+                                "method": "DELETE",
+                                "header": [
+                                  {
+                                    "key": "X-API-KEY",
+                                    "value": "<string>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/configurations/:externalId/properties/:key/external?api_key=<API Key>&workspaceId=<long>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "configurations",
+                                    ":externalId",
+                                    "properties",
+                                    ":key",
+                                    "external"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "api_key",
+                                      "value": "<API Key>"
+                                    },
+                                    {
+                                      "description": "(Required) ",
+                                      "key": "workspaceId",
+                                      "value": "<long>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "externalId"
+                                    },
+                                    {
+                                      "key": "key"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Unauthorized",
+                              "code": 401,
+                              "_postman_previewlanguage": "text",
+                              "header": [],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": null,
+                              "createdAt": "2026-07-28T02:13:14.000Z",
+                              "updatedAt": "2026-07-28T02:13:14.000Z",
+                              "uid": "35240-05cd5220-d1e0-400a-93a7-7fa69bae23e9"
+                            },
+                            {
+                              "id": "bbf73892-309d-41e7-9a39-d706fc26ba80",
+                              "name": "Configuration store or property not found",
+                              "originalRequest": {
+                                "method": "DELETE",
+                                "header": [
+                                  {
+                                    "key": "X-API-KEY",
+                                    "value": "<string>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/configurations/:externalId/properties/:key/external?api_key=<API Key>&workspaceId=<long>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "configurations",
+                                    ":externalId",
+                                    "properties",
+                                    ":key",
+                                    "external"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "api_key",
+                                      "value": "<API Key>"
+                                    },
+                                    {
+                                      "description": "(Required) ",
+                                      "key": "workspaceId",
+                                      "value": "<long>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "externalId"
+                                    },
+                                    {
+                                      "key": "key"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "Not Found",
+                              "code": 404,
+                              "_postman_previewlanguage": "text",
+                              "header": [],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": null,
+                              "createdAt": "2026-07-28T02:13:14.000Z",
+                              "updatedAt": "2026-07-28T02:13:14.000Z",
+                              "uid": "35240-bbf73892-309d-41e7-9a39-d706fc26ba80"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T02:13:14.000Z",
+                          "updatedAt": "2026-07-28T02:13:14.000Z",
+                          "uid": "35240-83604c22-31ec-4b84-890c-dfb88536fdab"
+                        }
+                      ],
+                      "id": "cea969f1-ad37-4ac0-b40b-2240da3f9d10",
+                      "createdAt": "2026-07-28T02:13:14.000Z",
+                      "updatedAt": "2026-07-28T02:13:14.000Z",
+                      "uid": "35240-cea969f1-ad37-4ac0-b40b-2240da3f9d10"
+                    }
+                  ],
+                  "id": "876fe5b7-8288-47e7-8de3-c7e46f718b82",
+                  "createdAt": "2026-07-28T02:13:14.000Z",
+                  "updatedAt": "2026-07-28T02:13:14.000Z",
+                  "uid": "35240-876fe5b7-8288-47e7-8de3-c7e46f718b82"
+                }
+              ],
+              "id": "08ff568e-d8d8-4fc6-9906-94e5e84f7bbe",
+              "createdAt": "2026-07-28T02:13:14.000Z",
+              "updatedAt": "2026-07-28T02:13:14.000Z",
+              "uid": "35240-08ff568e-d8d8-4fc6-9906-94e5e84f7bbe"
+            }
+          ],
+          "id": "51d12cf3-3195-4ae4-aba2-d73c63c71686",
+          "createdAt": "2026-07-28T02:13:14.000Z",
+          "updatedAt": "2026-07-28T02:13:14.000Z",
+          "uid": "35240-51d12cf3-3195-4ae4-aba2-d73c63c71686"
+        }
+      ],
+      "id": "b851ec44-19d6-4c54-a017-3949475b9498",
+      "createdAt": "2026-07-28T02:13:14.000Z",
+      "updatedAt": "2026-07-28T02:13:14.000Z",
+      "uid": "35240-b851ec44-19d6-4c54-a017-3949475b9498"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "query",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.laminar.run"
+    }
+  ]
+}

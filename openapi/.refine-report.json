@@ -1,0 +1,18 @@
+{
+  "provider": "minicor",
+  "sources": [
+    "minicor-configuration-stores-api-openapi.yml",
+    "minicor-external-api-openapi.yml",
+    "minicor-workflows-api-openapi.yml"
+  ],
+  "outputs": [
+    "minicor-configuration-stores-api-openapi.yml",
+    "minicor-external-api-openapi.yml",
+    "minicor-workflows-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

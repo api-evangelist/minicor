@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: https://registry.npmjs.org/@minicor/mcp-server/latest
+notes: >-
+  First-party CLI shipped inside the @minicor/mcp-server npm package (bin entries).
+  It bootstraps and runs the Minicor MCP server (stdio and HTTP transports) and
+  seeds agent skills, so AI coding agents in Cursor/Claude can build, debug and run
+  Minicor desktop-automation workflows conversationally. The binary is catalogued in
+  packages/minicor-packages.yml.
+cli:
+  name: minicor
+  package: "@minicor/mcp-server"
+  install:
+    - npm install -g @minicor/mcp-server
+    - npx -y @minicor/mcp-server
+  binaries:
+    - minicor
+    - laminar
+    - mcp-server
+    - minicor-mcp
+    - laminar-mcp
+    - minicor-mcp-http
+    - laminar-mcp
+    - minicor-mcp-setup
+    - laminar-mcp-setup
+    - minicor-bootstrap
+    - minicor-seed-skills
+  command_groups:
+    - name: mcp
+      description: Run the Minicor MCP server over stdio (minicor-mcp) or HTTP (minicor-mcp-http).
+    - name: setup
+      description: Authenticate and configure the MCP client integration (minicor-mcp-setup / laminar-mcp-setup).
+    - name: bootstrap
+      description: Bootstrap a new Minicor project/workspace (minicor-bootstrap).
+    - name: skills
+      description: Seed packaged agent skills into the client (minicor-seed-skills).

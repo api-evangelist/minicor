@@ -1,0 +1,22 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Minicor / Laminar API
+  version: 1.0.0
+extends: openapi/minicor-openapi.json
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-provider: minicor
+      x-apievangelist-enriched: '2026-07-20'
+      x-apievangelist-source: https://docs.laminar.run/
+  - target: $.info
+    update:
+      x-apievangelist-compliance:
+        - SOC 2 Type II
+        - HIPAA
+  - target: $.paths['/workflow/execute/external/{workflowId}'].post
+    update:
+      x-apievangelist-async: >-
+        Supports asynchronous completion via the optional callback_url query
+        parameter; see conventions/minicor-conventions.yml and
+        asyncapi/minicor-webhooks.yml.

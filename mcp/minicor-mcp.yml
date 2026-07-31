@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source:
+  - https://registry.npmjs.org/@minicor/mcp-server
+  - https://minicor.com/llms.txt
+  - https://minicor.com/.well-known/ai-plugin.json
+server:
+  name: minicor
+  transport: stdio
+  package: "@minicor/mcp-server"
+  version: 4.2.0
+  install: npx -y @minicor/mcp-server
+  http_binary: minicor-mcp-http
+  repository: https://github.com/laminar-run/mcp
+  url: null
+notes: >-
+  Minicor ships a first-party, published MCP server as the npm package
+  @minicor/mcp-server (v4.2.0; repo github.com/laminar-run/mcp; "for the Minicor
+  platform. Formerly Laminar."). It runs locally over stdio via
+  `npx -y @minicor/mcp-server` and provides an HTTP transport binary
+  (minicor-mcp-http); AI coding agents in Cursor/Claude can build, debug and manage
+  RPAs conversationally. The package README references a cloud-hosted endpoint
+  (mcp.minicor.com) but no hosted URL is confirmed in the npm registry metadata, so
+  `url` is left null. The tools below remain DERIVED candidates from the published
+  OpenAPI operations, not the package's confirmed tool manifest.
+tools:
+  - name: execute_workflow
+    description: Execute a desktop-automation workflow by id and return structured JSON.
+    source_operation: openapi/minicor-openapi.json#executeExternalFlow
+  - name: create_configuration_store
+    description: Create a new configuration store.
+    source_operation: openapi/minicor-openapi.json#createConfigurationStoreExternal
+  - name: delete_configuration_store
+    description: Archive a configuration store.
+    source_operation: openapi/minicor-openapi.json#deleteConfigurationStoreExternal
+  - name: restore_configuration_store
+    description: Restore an archived configuration store.
+    source_operation: openapi/minicor-openapi.json#restoreConfigurationStoreExternal
+  - name: get_configuration_keys
+    description: List property keys in a configuration store.
+    source_operation: openapi/minicor-openapi.json#getConfigurationKeysExternal
+  - name: bulk_update_properties
+    description: Update multiple properties in a configuration store.
+    source_operation: openapi/minicor-openapi.json#bulkUpdatePropertiesExternal
+  - name: remove_property
+    description: Remove a property from a configuration store.
+    source_operation: openapi/minicor-openapi.json#removePropertyExternal

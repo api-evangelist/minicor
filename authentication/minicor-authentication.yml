@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: openapi/minicor-openapi.json
+docs: https://docs.laminar.run/running-an-integration/api-key
+notes: >-
+  The Laminar external API authenticates with an API key, supplied either as the
+  api_key query parameter (documented primary method) or the X-API-KEY request
+  header. Keys are created and managed in workspace settings. Separately, the
+  Laminar workflow engine can store downstream target-API credentials
+  (AuthCredentials) supporting OAuth client-credentials, OAuth password grant,
+  API key, bearer token, basic and custom auth for the protected endpoints a
+  workflow calls; those are per-workflow secrets, not the Laminar API auth.
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+  - query
+schemes:
+- name: api-key-query
+  type: apiKey
+  in: query
+  parameter: api_key
+  description: API key authentication via query parameter
+  sources:
+  - openapi/minicor-openapi.json
+- name: api-key
+  type: apiKey
+  in: header
+  parameter: X-API-KEY
+  description: API key authentication via header
+  sources:
+  - openapi/minicor-openapi.json

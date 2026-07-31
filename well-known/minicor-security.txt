@@ -1,0 +1,5 @@
+Contact: mailto:connect@minicor.com
+Expires: 2027-03-12T00:00:00.000Z
+Preferred-Languages: en
+Policy: https://legal.laminar.run/privacy-policy
+Canonical: https://minicor.com/.well-known/security.txt

@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.laminar.run/get-in-touch/changelog
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://docs.laminar.run/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No formal deprecation/sunset policy is published. The docs mark individual
+    workflow keywords as deprecated (e.g. lam.result) but there is no
+    API-wide Deprecation/Sunset header contract.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.laminar.run/
+status_page_provider: BetterUptime
+changelog: https://docs.laminar.run/get-in-touch/changelog
+deprecated_operations: []

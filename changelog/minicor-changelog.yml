@@ -1,0 +1,45 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.laminar.run/get-in-touch/changelog
+title: Laminar Product Changelog
+scheme: weekly-dated
+current_version: v1
+notes: >-
+  The provider publishes a weekly, month-grouped product changelog rather than
+  semantic release tags. Recent window captured below verbatim from the docs.
+entries:
+  - date: '2025-02-17'
+    period: Week of February 17, 2025
+    highlights:
+      - Introduced V2 Workspaces Page with improved user interface and performance
+  - date: '2025-02-12'
+    period: Week of February 12-14, 2025
+    highlights:
+      - Enhanced error handling and toast notifications across the platform
+      - Users can now accept/decline workspace invitations upon signin/registration
+      - Fixed CRUD operations for the Issues management feature
+      - Enhanced error page UX with retry actions
+  - date: '2025-02-10'
+    period: Week of February 10, 2025
+    highlights:
+      - Added HTTP Request keywords for improved API integration
+      - Enhanced Continuous Deployment for Production and Staging environments
+      - Fixed issues with Global Workflow Object
+  - date: '2025-01-28'
+    period: Week of January 28, 2025
+    highlights:
+      - Enhanced workflow execution panel with improved UX
+      - Added analytics for workflow performance insight
+      - Split test and run workflow actions for granular control
+  - date: '2025-01-22'
+    period: Week of January 22-25, 2025
+    highlights:
+      - New sign-up and sign-in flow
+      - Configuration flow for easier system setup
+      - Added Issues management functionality
+  - date: '2024-12-03'
+    period: Week of December 3, 2024
+    highlights:
+      - Added lam.xmlString to pass XML request bodies directly
+      - Introduced lam.pathParams for enhanced routing
+      - Added content-type based data transformation

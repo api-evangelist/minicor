@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+host: https://minicor.com
+documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: minicor-security.txt
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: minicor-ai-plugin.json
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+other_hosts:
+  - host: https://docs.laminar.run
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://api.laminar.run
+    note: API host; well-known surface not probed (authenticated API gateway)

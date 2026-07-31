@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Minicor",
+  "name_for_model": "minicor",
+  "description_for_human": "A platform for building and running desktop automations at scale with computer use agents.",
+  "description_for_model": "Minicor automates legacy desktop software (EHRs, ERPs, DMS, WMS, PMS) that has no APIs. One API call triggers a full desktop workflow on a Windows VM. Automations are stored as deterministic code and self-heal when UIs change. SOC 2 Type II and HIPAA compliant.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://minicor.com/llms.txt"
+  },
+  "logo_url": "https://minicor.com/images/logo-minicor.svg",
+  "contact_email": "connect@minicor.com",
+  "legal_info_url": "https://legal.laminar.run/terms-of-service"
+}

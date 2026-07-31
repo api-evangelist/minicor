@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source:
+  - https://docs.laminar.run/running-an-integration/remote-workflow-execution
+  - https://docs.laminar.run/debugging-an-integration/failure-alert-notifications
+spec_type: Webhooks
+notes: >-
+  Minicor / Laminar exposes an HTTP callback surface rather than a published
+  AsyncAPI document. The workflow execution endpoint accepts a callback_url and
+  delivers a completion callback; failure alerts are delivered via in-app and
+  email channels (user-configurable), not HTTP webhooks.
+webhooks:
+  - name: workflow_execution_callback
+    delivery: http-callback
+    trigger: workflow execution completes
+    configured_via:
+      operation: openapi/minicor-openapi.json#executeExternalFlow
+      param: callback_url
+      location: query
+    payload: structured JSON result of the workflow execution
+  - name: failure_alert
+    delivery: in-app + email
+    trigger: a workflow execution fails
+    configurable: true
+    docs: https://docs.laminar.run/debugging-an-integration/failure-alert-notifications
+    note: Notification channels, not an HTTP webhook.

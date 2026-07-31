@@ -1,0 +1,50 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.laminar.run/running-an-integration/api-key
+notes: >-
+  Cross-cutting request/response semantics for the Laminar external API, harvested
+  from the docs and derived from the OpenAPI. No idempotency-key contract is
+  documented, so no Idempotency pointer is emitted.
+authentication:
+  style: api-key
+  query_param: api_key
+  header: X-API-KEY
+  docs: https://docs.laminar.run/running-an-integration/api-key
+versioning:
+  scheme: uri-path-segment
+  current: v1
+  note: OpenAPI info.version is "v1"; endpoints are exposed under /workflow and /configurations.
+async_execution:
+  callback_url:
+    param: callback_url
+    location: query
+    applies_to: executeExternalFlow
+    description: >-
+      Optional URL Laminar calls back when a workflow execution completes; enables
+      asynchronous, webhook-style completion notification for long-running desktop
+      workflows.
+  partial_execution:
+    start_from_step: integer (query) — begin execution at a specific step
+    end_at_step: integer (query) — stop execution at a specific step
+response_format:
+  default: json
+  control_param: response_type
+  values_seen: [json]
+  note: response_type query parameter selects the response format (default json).
+error_envelope:
+  style: http-status + json body
+  problem_json: false
+  see: errors/minicor-problem-types.yml
+idempotency:
+  supported: false
+  note: No idempotency-key header or parameter is documented.
+pagination:
+  supported: false
+  note: External endpoints operate on single workflows/configuration stores; no list pagination documented.
+rate_limiting:
+  documented: false
+cross_links:
+  authentication: authentication/minicor-authentication.yml
+  errors: errors/minicor-problem-types.yml
+  lifecycle: lifecycle/minicor-lifecycle.yml
+  webhooks: asyncapi/minicor-webhooks.yml

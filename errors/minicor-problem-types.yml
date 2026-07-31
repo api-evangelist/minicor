@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/minicor-openapi.json
+format: http-status
+notes: >-
+  The Laminar API returns plain HTTP status codes with a JSON body; it does not
+  advertise RFC 9457 application/problem+json. Problems below are derived from the
+  4xx/5xx responses declared in the published OpenAPI fragments.
+problems:
+  - status: 400
+    title: Execution failed
+    meaning: The workflow could not be executed successfully.
+    source_operation: openapi/minicor-openapi.json#executeExternalFlow
+  - status: 401
+    title: Unauthorized / Invalid API key
+    meaning: The API key was missing or invalid.
+    remediation: Supply a valid key via the api_key query parameter or X-API-KEY header.
+    source_operations:
+      - openapi/minicor-openapi.json#executeExternalFlow
+      - openapi/minicor-openapi.json#createConfigurationStoreExternal
+      - openapi/minicor-openapi.json#deleteConfigurationStoreExternal
+      - openapi/minicor-openapi.json#restoreConfigurationStoreExternal
+      - openapi/minicor-openapi.json#getConfigurationKeysExternal
+      - openapi/minicor-openapi.json#bulkUpdatePropertiesExternal
+      - openapi/minicor-openapi.json#removePropertyExternal
+  - status: 404
+    title: Configuration store or property not found
+    meaning: The referenced configuration store (externalId) or property key does not exist.
+    source_operations:
+      - openapi/minicor-openapi.json#deleteConfigurationStoreExternal
+      - openapi/minicor-openapi.json#restoreConfigurationStoreExternal
+      - openapi/minicor-openapi.json#getConfigurationKeysExternal
+      - openapi/minicor-openapi.json#bulkUpdatePropertiesExternal
+      - openapi/minicor-openapi.json#removePropertyExternal
