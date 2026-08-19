@@ -1,0 +1,80 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Laminar Configuration Stores Workflows API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Workflows",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Execute Workflow (External)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.laminar.run/workflow/execute/external/:workflowId",
+            "headers": [
+              {
+                "name": "X-API-KEY",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "workflowId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "configuration_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "response_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_from_step",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end_at_step",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "callback_url",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Executes a workflow using external API key authentication."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

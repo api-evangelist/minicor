@@ -1,0 +1,277 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Laminar Configuration Stores external API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "external",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Execute Workflow (External)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.laminar.run/workflow/execute/external/:workflowId",
+            "headers": [
+              {
+                "name": "X-API-KEY",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "workflowId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "configuration_id",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "response_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "start_from_step",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "end_at_step",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "callback_url",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Executes a workflow using external API key authentication."
+        },
+        {
+          "info": {
+            "name": "Create Configuration Store (External)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.laminar.run/configurations/external",
+            "headers": [
+              {
+                "name": "X-API-KEY",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new configuration store via external API key authentication."
+        },
+        {
+          "info": {
+            "name": "Delete Configuration Store (External)",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.laminar.run/configurations/:externalId/external",
+            "headers": [
+              {
+                "name": "X-API-KEY",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "externalId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Archives a configuration store via external API key authentication."
+        },
+        {
+          "info": {
+            "name": "Restore Configuration Store (External)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.laminar.run/configurations/:externalId/restore/external",
+            "headers": [
+              {
+                "name": "X-API-KEY",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "externalId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Restores an archived configuration store via external API key authentication."
+        },
+        {
+          "info": {
+            "name": "Get Configuration Keys (External)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.laminar.run/configurations/:externalId/keys/external",
+            "headers": [
+              {
+                "name": "X-API-KEY",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "externalId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "workspaceId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieves list of property keys via external API key authentication."
+        },
+        {
+          "info": {
+            "name": "Bulk Update Properties (External)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.laminar.run/configurations/:externalId/properties/external",
+            "headers": [
+              {
+                "name": "X-API-KEY",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "externalId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "workspaceId",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates multiple properties via external API key authentication."
+        },
+        {
+          "info": {
+            "name": "Remove Property (External)",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.laminar.run/configurations/:externalId/properties/:key/external",
+            "headers": [
+              {
+                "name": "X-API-KEY",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "api_key",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "externalId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "key",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "workspaceId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Removes a property from the configuration store via external API key authentication."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
