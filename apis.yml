@@ -42,6 +42,16 @@ tags:
 - Desktop Automation
 - RPA
 - Computer Use Agents
+- Workflow-Automation
+- Healthcare
+- Legacy Systems
+- AI Agents
+- Integration
+tags_raw:
+- Company
+- Desktop Automation
+- RPA
+- Computer Use Agents
 - Workflow Automation
 - Healthcare
 - Legacy Systems
@@ -65,6 +75,8 @@ apis:
   humanURL: https://docs.laminar.run/
   baseURL: https://api.laminar.run
   tags:
+  - ConfigurationStores
+  tags_raw:
   - Configuration Stores
   properties:
   - type: OpenAPI
@@ -81,6 +93,8 @@ apis:
   humanURL: https://docs.laminar.run/
   baseURL: https://api.laminar.run
   tags:
+  - External
+  tags_raw:
   - external
   properties:
   - type: OpenAPI
