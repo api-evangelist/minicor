@@ -68,25 +68,6 @@ x-enrichment:
   artifacts_added: 2
   pass: local-v1
 apis:
-- aid: minicor:minicor-configuration-stores-api
-  name: Minicor Configuration Stores API
-  description: >-
-    Laminar Configuration Store endpoints, for managing configuration stores and properties within workspaces.
-  humanURL: https://docs.laminar.run/
-  baseURL: https://api.laminar.run
-  tags:
-  - ConfigurationStores
-  tags_raw:
-  - Configuration Stores
-  properties:
-  - type: OpenAPI
-    url: openapi/minicor-configuration-stores-api-openapi.yml
-  - type: APIReference
-    url: https://docs.laminar.run/api-guide/execute-a-workflow
-  - type: Documentation
-    url: https://docs.laminar.run/
-  - type: GettingStarted
-    url: https://docs.laminar.run/getting-started
 - aid: minicor:minicor-external-api
   name: Minicor external API
   description: The external API from Minicor — 7 operation(s) for external.
@@ -99,22 +80,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/minicor-external-api-openapi.yml
-  - type: APIReference
-    url: https://docs.laminar.run/api-guide/execute-a-workflow
-  - type: Documentation
-    url: https://docs.laminar.run/
-  - type: GettingStarted
-    url: https://docs.laminar.run/getting-started
-- aid: minicor:minicor-workflows-api
-  name: Minicor Workflows API
-  description: Laminar Workflow endpoints, for managing workflows and workflow executions.
-  humanURL: https://docs.laminar.run/
-  baseURL: https://api.laminar.run
-  tags:
-  - Workflows
-  properties:
-  - type: OpenAPI
-    url: openapi/minicor-workflows-api-openapi.yml
   - type: APIReference
     url: https://docs.laminar.run/api-guide/execute-a-workflow
   - type: Documentation
