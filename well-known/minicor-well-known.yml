@@ -1,7 +1,16 @@
 generated: '2026-07-20'
 method: searched
 host: https://minicor.com
-documents:
+other_hosts:
+- host: https://docs.laminar.run
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://api.laminar.run
+  note: API host; well-known surface not probed (authenticated API gateway)
+hosts:
+- host: https://minicor.com
+  documents:
   - path: /.well-known/security.txt
     status: 200
     file: minicor-security.txt
@@ -14,10 +23,8 @@ documents:
     status: 404
   - path: /.well-known/api-catalog
     status: 404
-other_hosts:
-  - host: https://docs.laminar.run
-    documents:
-      - path: /.well-known/security.txt
-        status: 404
-  - host: https://api.laminar.run
-    note: API host; well-known surface not probed (authenticated API gateway)
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.

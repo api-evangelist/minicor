@@ -1,18 +1,22 @@
 {
   "provider": "minicor",
   "sources": [
-    "minicor-configuration-stores-api-openapi.yml",
-    "minicor-external-api-openapi.yml",
-    "minicor-workflows-api-openapi.yml"
+    "_original/minicor-openapi.json"
   ],
   "outputs": [
-    "minicor-configuration-stores-api-openapi.yml",
-    "minicor-external-api-openapi.yml",
-    "minicor-workflows-api-openapi.yml"
+    "minicor-external-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "minicor-openapi.json: upgraded openapi 3.0.1 -> OpenAPI 3.2.0",
+    "minicor-openapi.json: declared missing tag: external",
+    "minicor-openapi.json: multi-axis tagging (3 tags, 1 first tags, 2.00x duplication over 7 operations) \u2014 split on first tag, 7 operations narrowed",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "minicor-external-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
