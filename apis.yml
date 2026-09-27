@@ -55,7 +55,7 @@ tags:
 - Desktop Automation
 - RPA
 - Computer Use Agents
-- Workflow-Automation
+- Workflow Automation
 - Healthcare
 - Legacy Systems
 - AI Agents
@@ -70,6 +70,7 @@ tags_raw:
 - Legacy Systems
 - AI Agents
 - Integration
+- Workflow-Automation
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -82,7 +83,7 @@ x-enrichment:
   pass: local-v1
 apis:
 - aid: minicor:minicor-external-api
-  name: Minicor external API
+  name: Minicor External API
   description: The external API from Minicor — 7 operation(s) for external.
   humanURL: https://docs.laminar.run/
   baseURL: https://api.laminar.run
