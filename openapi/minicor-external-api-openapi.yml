@@ -315,28 +315,6 @@ paths:
           description: Configuration store or property not found
 components:
   schemas:
-    Property:
-      required:
-      - key
-      - value
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        key:
-          type: string
-        value:
-          type: string
-    BulkUpdatePropertiesRequest:
-      required:
-      - properties
-      type: object
-      properties:
-        properties:
-          type: array
-          items:
-            $ref: '#/components/schemas/PropertyDTO'
     CreateConfigurationStoreRequest:
       required:
       - externalId
@@ -356,6 +334,53 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PropertyDTO'
+    PropertyDTO:
+      required:
+      - key
+      - value
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+    ConfigurationKeysResponse:
+      required:
+      - externalId
+      - keys
+      - name
+      type: object
+      properties:
+        keys:
+          type: array
+          items:
+            type: string
+        externalId:
+          type: string
+        name:
+          type: string
+    BulkUpdatePropertiesRequest:
+      required:
+      - properties
+      type: object
+      properties:
+        properties:
+          type: array
+          items:
+            $ref: '#/components/schemas/PropertyDTO'
+    Property:
+      required:
+      - key
+      - value
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        key:
+          type: string
+        value:
+          type: string
     ConfigurationStore:
       required:
       - properties
@@ -379,31 +404,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Property'
-    ConfigurationKeysResponse:
-      required:
-      - externalId
-      - keys
-      - name
-      type: object
-      properties:
-        keys:
-          type: array
-          items:
-            type: string
-        externalId:
-          type: string
-        name:
-          type: string
-    PropertyDTO:
-      required:
-      - key
-      - value
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          type: string
   securitySchemes:
     api-key-query:
       type: apiKey
