@@ -64,6 +64,98 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Minicor is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Minicor (operated by Laminar Run, Inc.) is a platform for building and running desktop automations at scale using computer-use AI agents. Legacy desktop software such as EHRs, ERPs, DMS, WMS and PMS systems often has no API, so the only way to read or write data is to drive the desktop like a human. Minicor automates these systems reliably: install a desktop client on the machines running the legacy software, record a workflow, and trigger a full desktop workflow on a Windows VM with a single API call that returns structured JSON. Automations are stored as deterministic code for speed while a reasoning model, grounding model, reflection agent and OCR handle recovery, adaptation and edge cases, self-healing when UIs change. The developer-facing surface is the Laminar API (api.laminar.run) for executing workflows and managing configuration stores, authenticated with an API key. Minicor is SOC 2 Type II and HIPAA compliant and is a Y Combinator (X26) company.
 
-Backed by: y-combinator
+**Areas:** Company · Desktop Automation · RPA · Computer Use Agents · Workflow Automation · Healthcare · Legacy Systems · AI Agents · Integration
+
+## Minicor on APIs.io
+
+Everything profiled for Minicor is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/minicor/](https://apis.io/providers/minicor/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Minicor External API](https://apis.io/apis/minicor/minicor-external-api/) — The external API from Minicor — 7 operation(s) for external.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Minicor Webhooks](https://apis.io/asyncapis/minicor/minicor-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [minicor](https://apis.io/servers/minicor/minicor/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Minicor Agentic Access](https://apis.io/agentic-access/minicor/minicor-agentic-access/)
+
+#### Collections (6)
+
+Postman and Open Collection request collections.
+
+- [Laminar Configuration Stores API](https://apis.io/collections/minicor/open-minicor-configuration-stores-api/)
+- [Laminar Configuration Stores external API](https://apis.io/collections/minicor/open-minicor-external-api/)
+- [Laminar Configuration Stores Workflows API](https://apis.io/collections/minicor/open-minicor-workflows-api/)
+- [Laminar Configuration Stores API](https://apis.io/collections/minicor/postman-minicor-configuration-stores-api/)
+- [Laminar Configuration Stores external API](https://apis.io/collections/minicor/postman-minicor-external-api/)
+- [Laminar Configuration Stores Workflows API](https://apis.io/collections/minicor/postman-minicor-workflows-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Minicor Overlay](https://apis.io/overlays/minicor/minicor-overlay/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Minicor Authentication](https://apis.io/security/minicor/minicor-authentication/)
+- [Minicor Domain Security](https://apis.io/security/minicor/minicor-domain-security/)
+- [Minicor Trust Center](https://apis.io/security/minicor/minicor-trust-center/)
+- [Minicor Vulnerability Disclosure](https://apis.io/security/minicor/minicor-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Documentation](https://docs.laminar.run/)
+- [Getting started](https://docs.laminar.run/getting-started)
+- [API reference](https://docs.laminar.run/api-guide/execute-a-workflow)
+- [Sign up](https://app.laminar.run/)
+- [Support](https://docs.laminar.run/get-in-touch/product-support)
+- [Changelog](https://docs.laminar.run/get-in-touch/changelog)
+- [Blog](https://minicor.com/blog)
+- [Compliance](https://app.mycroft.io/trust/laminar)
+- [Trust centre](https://app.mycroft.io/trust/laminar)
+- [Terms of service](https://legal.laminar.run/terms-of-service)
+- [Privacy policy](https://legal.laminar.run/privacy-policy)
+- [GitHub](https://github.com/laminar-run)
+- [Status](https://status.laminar.run/)
+
+## API Evangelist rating
+
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
+
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Minicor: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/minicor/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
